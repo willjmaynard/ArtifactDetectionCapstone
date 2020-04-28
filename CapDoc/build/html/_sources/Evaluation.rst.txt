@@ -15,4 +15,4 @@ Where TP, TN, P, and N are the numbers of correctly classified in-focus and blur
 
 In the figure below, the two bar graphs compare the accuracy and F1 Scores of our classification techniques on the same validation set.
 
-.. image:: ../images/class_validation.png
+.. image:: ../images/class_validation.PNG
