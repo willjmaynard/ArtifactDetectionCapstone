@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>References &#8212; Artifact Detection Tool  documentation</title>
+    <title>Related Works &#8212; Artifact Detection Tool  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -15,7 +15,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Conclusion" href="Conclusion.html" />
+    <link rel="next" title="Implementation" href="Implementation.html" />
+    <link rel="prev" title="Validation" href="Validation.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -32,11 +33,25 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="references">
-<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
-<p>[1] Senaras, C., Niazi, M. K. K., Lozanski, G., &amp; Gurcan, M. N. (2018). DeepFocus: detection of out-of-focus regions in whole slide digital images using deep learning. PloS one, 13(10).
-[2] Lopez, X. M., D’Andrea, E., Barbot, P., Bridoux, A. S., Rorive, S., Salmon, I., … &amp; Decaestecker, C. (2013). An automated blur detection method for histological whole slide imaging. PloS one, 8(12).
-[3] Priya Bagaria (2018). Classification of Blurred and Non-Blurred Images. DOI: <a class="reference external" href="https://github.com/priyabagaria/Image-Blur-Detection">https://github.com/priyabagaria/Image-Blur-Detection</a></p>
+  <div class="section" id="related-works">
+<h1>Related Works<a class="headerlink" href="#related-works" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="classification-of-blurred-and-non-blurred-images-3">
+<h2>Classification of Blurred and Non-Blurred Images [3]<a class="headerlink" href="#classification-of-blurred-and-non-blurred-images-3" title="Permalink to this headline">¶</a></h2>
+<p>There is a 2018 github project that uses Laplacian and a Convolutional Neural Network (CNN). They used the CERTH Image Blur Data set. The dataset consists of undistorted, naturally-blurred and artificially-blurred images for image quality assessment purposes. The dataset they used is available at: <a class="reference external" href="http://mklab.iti.gr/files/imageblur/CERTH_ImageBlurDataset.zip">http://mklab.iti.gr/files/imageblur/CERTH_ImageBlurDataset.zip</a>.
+Their Project yielded a CNN accuracy of 67.70%, and a Laplacian Accuracy of 63.58%.</p>
+</div>
+<div class="section" id="deepfocus-detection-of-out-of-focus-regions-in-whole-slide-digital-images-using-deep-learning-1">
+<h2>DeepFocus: Detection of out-of-focus regions in whole slide digital images using deep learning [1]<a class="headerlink" href="#deepfocus-detection-of-out-of-focus-regions-in-whole-slide-digital-images-using-deep-learning-1" title="Permalink to this headline">¶</a></h2>
+<p>We primarily built our Convolutional Neural Network (CNN) based on the studies of
+DeepFocus.  The DeepFocus CNN architecture consists of five convolution layers, three max-pooling layers (after the third, fourth and fifth convolution layers) and fully connected layers. The last layer of the CNN in DeepFocus is a softmax, which results in a probability of a tile belonging to either of the two classes.</p>
+<p>They used accuracy to evaluate their CNN; they tested their CNN on 6 Whole Slide Images, and achieved the following average accuracies:</p>
+<p>Slide 1: 85.4%
+Slide 2: 99.5%
+Slide 3: 99.2%
+Slide 4: 83.2%
+Slide 5: 99.7%
+Slide 6: 92.2%</p>
+</div>
 </div>
 
 
@@ -62,18 +77,23 @@
 <li class="toctree-l1"><a class="reference internal" href="Software Requirements.html">Software Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Validation.html">Validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Related Works.html">Related Works</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Related Works</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#classification-of-blurred-and-non-blurred-images-3">Classification of Blurred and Non-Blurred Images [3]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deepfocus-detection-of-out-of-focus-regions-in-whole-slide-digital-images-using-deep-learning-1">DeepFocus: Detection of out-of-focus regions in whole slide digital images using deep learning [1]</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Implementation.html">Implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Evaluation.html">Evaluation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Conclusion.html">Conclusion</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="References.html">References</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="Conclusion.html" title="previous chapter">Conclusion</a></li>
+      <li>Previous: <a href="Validation.html" title="previous chapter">Validation</a></li>
+      <li>Next: <a href="Implementation.html" title="next chapter">Implementation</a></li>
   </ul></li>
 </ul>
 </div>
@@ -109,7 +129,7 @@
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="_sources/References.rst.txt"
+      <a href="_sources/Related Works.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
